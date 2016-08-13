@@ -1,6 +1,6 @@
 
 <?php
-				$months["  "] = "0"; 
+				$months["Null"] = "0"; 
 				$months["January"] = "31";
 				$months["February"] = "28 days, if leap year 29";
 				$months["March"] = "31";
@@ -14,8 +14,6 @@
 				$months["November"] = "30";
 				$months["December"] = "31";
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -88,14 +86,13 @@
 	<form method="post">
 		<h4>Select Month </h4> 
 		<select name="month" class="select">
-			<option>
+			<option value="Null"> SELECT A MONTH </option>
 			<?php 
 				for($i = 1 ; $i < 14 ; $i++){
 					$dateObj   = DateTime::createFromFormat('!m', $i);
-					echo '<option>'.$dateObj -> format('F').'</option>';// strtoupper 	NOT WORKING!!!
+					echo '<option value="'.$dateObj -> format('F').'">'.strtoupper($dateObj -> format('F')).'</option>';// strtoupper is WORKING!!!
 				}
 			?>
-			</option>
 		</select>
 		<br><br>
 		<input class="button" type="submit" value="Submit" name="submit"/>
