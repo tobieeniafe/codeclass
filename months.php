@@ -15,8 +15,6 @@
 				$months["December"] = "31";
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
