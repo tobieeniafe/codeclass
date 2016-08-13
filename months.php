@@ -88,7 +88,7 @@
 		<select name="month" class="select">
 			<option value="Null"> SELECT A MONTH </option>
 			<?php 
-				for($i = 1 ; $i < 14 ; $i++){
+				for($i = 1 ; $i <= 12 ; $i++){
 					$dateObj   = DateTime::createFromFormat('!m', $i);
 					echo '<option value="'.$dateObj -> format('F').'">'.strtoupper($dateObj -> format('F')).'</option>';// strtoupper is WORKING!!!
 				}
