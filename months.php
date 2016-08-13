@@ -92,7 +92,7 @@
 			<?php 
 				for($i = 1 ; $i < 14 ; $i++){
 					$dateObj   = DateTime::createFromFormat('!m', $i);
-					echo '<option>'.$dateObj -> format('F').'</option>';// strtoupper 	NOT WORKING!!!
+					echo '<option>'.strtoupper($dateObj -> format('F')).'</option>';// strtoupper is WORKING!!!
 				}
 			?>
 			</option>
